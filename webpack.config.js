@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -11,12 +12,12 @@ module.exports = {
     contentBase: './dist',
     hot: true,
   },
-  plugins: [new HtmlWebpackPlugin({ title: 'WP Pizzeria' })],
+  plugins: [new HtmlWebpackPlugin({ title: 'WP Pizzeria' }), new MiniCssExtractPlugin()],
   module: {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
     ],
   },
