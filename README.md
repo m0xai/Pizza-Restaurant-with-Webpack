@@ -1,0 +1,7 @@
+- Webpack 5
+- Dynamic Import
+- Style Loader
+- PurgeCSS
+- Code Splitting
+- SASS/SCSS
+- Hot Module Replacement
