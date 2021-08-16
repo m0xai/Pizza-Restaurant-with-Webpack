@@ -1,3 +1,18 @@
 h1 {
   color: red;
 }
+
+#navbar {
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbarUl {
+  width: 360px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}

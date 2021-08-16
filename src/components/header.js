@@ -1,4 +1,4 @@
-import { makeTitle } from '../utils';
+import { makeNodeItem } from '../utils';
 import '../css/components/header.scss';
 import { content } from '../wrapper';
 
@@ -9,9 +9,6 @@ content.appendChild(header);
 const navbar = document.createElement('nav');
 navbar.setAttribute('id', 'navbar');
 header.appendChild(navbar);
-
-// Make Site Title From utils.js
-makeTitle(content, 'Site Name', 'h1');
 
 const navItemsWrapper = document.createElement('ul');
 navItemsWrapper.setAttribute('id', 'navbarUl');
@@ -27,10 +24,16 @@ function makeNavLink(name) {
   return { navItemLi };
 }
 
+// Initialize site name
+const siteName = document.createElement('span');
+siteName.innerHTML = 'Site Name';
+siteName.setAttribute('id', 'site-name');
+navbar.insertAdjacentElement('afterbegin', siteName);
+
 (function () {
   const pages = ['Home', 'Menu', 'About', 'Contact'];
   for (let page of pages) {
-    navItemsWrapper.appendChild(makeNavLink(page).navItemLi);
+    navItemsWrapper.insertAdjacentElement('beforeend', makeNavLink(page).navItemLi);
   }
 })();
 

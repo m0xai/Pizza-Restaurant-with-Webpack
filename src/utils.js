@@ -1,13 +1,9 @@
-function makeParagraph(parent, text) {
-  const p = document.createElement('p');
-  p.innerText = text;
-  parent.appendChild(p);
-}
-
-function makeTitle(parent, text, size) {
-  const title = document.createElement(size);
-  title.innerText = text;
-  parent.appendChild(title);
+function makeNodeItem(parent, innerHTML, element, id, klasse) {
+  const item = document.createElement(element);
+  item.innerHTML = innerHTML;
+  id != null ? item.setAttribute('id', id) : null;
+  klasse != null ? item.classList.add(klasse) : null;
+  parent.appendChild(item);
 }
 
 function makeImage(parent, src, height, width) {
@@ -18,4 +14,4 @@ function makeImage(parent, src, height, width) {
   parent.appendChild(img);
 }
 
-export { makeParagraph, makeTitle };
+export { makeNodeItem, makeImage };
