@@ -22,10 +22,26 @@ makeButton('hero-text', 'Book Now', 'button', 'book-now-btn', 'btn-primary');
 insertItem('home-main', null, 'div', 'home-about-section-wrapper');
 insertItem('home-about-section-wrapper', null, 'div', 'home-about-section');
 insertItem('home-about-section', null, 'div', 'home-about-left');
-makeImage('home-about-left', homeAboutImg1, 960, 640, null, 'home-about-image');
-makeImage('home-about-left', homeAboutImg2, 265, 239, null, 'home-about-image');
-makeImage('home-about-left', homeAboutImg3, 265, 239, null, 'home-about-image');
+makeImage('home-about-left', homeAboutImg1, null, 'home-about-image');
+makeImage('home-about-left', homeAboutImg2, null, 'home-about-image');
+makeImage('home-about-left', homeAboutImg3, null, 'home-about-image');
 insertItem('home-about-section', null, 'div', 'home-about-right');
+insertItem('home-about-right', 'About Us', 'h2', null, 'section-title');
+insertItem(
+  'home-about-right',
+  'Fish is one of the most wholesome foods that man can eat. In fact, people have been eating fish throughout human history. These days, many cooks yearn Fish is one of the most wholesome foods that man can eat. In fact,',
+  'p',
+  null,
+  'section-paragraph'
+);
+insertItem(
+  'home-about-right',
+  'Fish is one of the most wholesome foods that man can eat. In fact, people have been eating fish throughout human history. These days, many cooks yearn Fish is',
+  'p',
+  null,
+  'section-paragraph'
+);
+insertItem('home-about-right', 'Learn More', 'button', null, 'btn-primary');
 
 insertItem('home-main', null, 'div', 'home-menu-section-wrapper');
 insertItem('home-menu-section-wrapper', null, 'div', 'home-menu-section');

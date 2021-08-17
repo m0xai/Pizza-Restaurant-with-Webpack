@@ -6,11 +6,9 @@ function insertItem(parentId, innerHTML, element, id, klasse) {
   document.getElementById(parentId).insertAdjacentElement('beforeend', item);
 }
 
-function makeImage(parentId, src, height, width, id, klasse) {
+function makeImage(parentId, src, id, klasse) {
   const img = document.createElement('img');
   img.src = src;
-  img.height = height;
-  img.width = width;
   id != null ? img.setAttribute('id', id) : undefined;
   klasse != null ? img.classList.add(klasse) : undefined;
   document.getElementById(parentId).appendChild(img);
