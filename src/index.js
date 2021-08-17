@@ -1,11 +1,8 @@
 import { content, button } from './wrapper';
+import { homeMain } from './pages/home';
 import header from './components/header';
-import home from './pages/home';
-import { makeNodeItem, makeImage } from './utils';
+import { insertItem, makeImage } from './utils';
 import './css/main.scss';
-
-// Initialize main wrapper
-document.body.appendChild(content);
 
 //? Dynamically Importing
 // const dynFooter = () => import('./components/footer');
@@ -16,8 +13,8 @@ document.body.appendChild(content);
 //     .catch((error) => 'An error occurred while loading the component');
 // });
 
-makeNodeItem(content, '', 'div', 'mdIci', 'kerem');
+insertItem(content, '', 'div', 'mdIci', 'kerem');
 const mdIci = document.getElementById('mdIci');
-makeNodeItem(mdIci, 'Merhaba Dunya', 'h2', 'merhabeDunya', 'none');
-makeNodeItem(content, 'Hello you all!', 'p', null, 'kerem');
-makeNodeItem(content, 'Katya', 'h1');
+insertItem(mdIci, 'Merhaba Dunya', 'h2', 'merhabeDunya', 'none');
+insertItem(content, 'Hello you all!', 'p', null, 'kerem');
+insertItem(content, 'Katya', 'h1');

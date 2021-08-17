@@ -2,17 +2,36 @@ h1 {
   color: red;
 }
 
-#navbar {
+#site-navbar {
+  margin: 0 auto;
+  max-width: 1200px;
   height: 60px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  span {
+    color: white;
+    font-weight: bold;
+  }
 }
 
-#navbarUl {
+#site-nav-wrapper {
   width: 360px;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
+  li {
+    a {
+      font-weight: bold;
+      color: white;
+    }
+  }
+}
+
+#hero-title {
+  font-family: 'Oleo Script Swash Caps', cursive;
+  color: white;
+  margin: 0;
+  font-size: 4rem;
 }

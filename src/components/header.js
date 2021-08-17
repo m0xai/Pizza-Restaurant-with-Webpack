@@ -1,24 +1,24 @@
-import { makeNodeItem } from '../utils';
+import { addAfter, addBefore, insertItem, makeNodeItem } from '../utils';
 import '../css/components/header.scss';
 import { content } from '../wrapper';
 
-const header = document.createElement('header');
-header.setAttribute('id', 'header');
-content.appendChild(header);
+// Initialize Header
+addBefore(content, null, 'header', 'site-header');
+const siteHeader = document.getElementById('site-header');
 
-const navbar = document.createElement('nav');
-navbar.setAttribute('id', 'navbar');
-header.appendChild(navbar);
+insertItem(siteHeader, null, 'nav', 'site-navbar');
+const siteNavbar = document.getElementById('site-navbar');
 
-const navItemsWrapper = document.createElement('ul');
-navItemsWrapper.setAttribute('id', 'navbarUl');
-navbar.appendChild(navItemsWrapper);
+insertItem(siteNavbar, null, 'ul', 'site-nav-wrapper');
+const siteNavWrapper = document.getElementById('site-nav-wrapper');
 
+// Create Nav items
 function makeNavLink(name) {
   const navItemLi = document.createElement('li');
   const navItemLink = document.createElement('a');
   navItemLink.innerText = name;
   navItemLink.href = `/${name.toLowerCase()}`;
+  navItemLi.setAttribute('id', 'navItem' + name);
   navItemLi.setAttribute('class', 'nav-item');
   navItemLi.appendChild(navItemLink);
   return { navItemLi };
@@ -28,13 +28,13 @@ function makeNavLink(name) {
 const siteName = document.createElement('span');
 siteName.innerHTML = 'Site Name';
 siteName.setAttribute('id', 'site-name');
-navbar.insertAdjacentElement('afterbegin', siteName);
+siteNavbar.insertAdjacentElement('afterbegin', siteName);
 
 (function () {
   const pages = ['Home', 'Menu', 'About', 'Contact'];
   for (let page of pages) {
-    navItemsWrapper.insertAdjacentElement('beforeend', makeNavLink(page).navItemLi);
+    siteNavWrapper.insertAdjacentElement('beforeend', makeNavLink(page).navItemLi);
   }
 })();
 
-export default header;
+export { siteHeader };

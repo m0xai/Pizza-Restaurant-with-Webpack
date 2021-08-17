@@ -12,12 +12,22 @@ module.exports = {
     contentBase: './dist',
     hot: true,
   },
-  plugins: [new HtmlWebpackPlugin({ title: 'WP Pizzeria' }), new MiniCssExtractPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'WP Gaststaette',
+      template: './src/indexTemplate.html',
+    }),
+    new MiniCssExtractPlugin(),
+  ],
   module: {
     rules: [
       {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
       },
     ],
   },
