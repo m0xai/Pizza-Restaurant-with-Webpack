@@ -23,10 +23,18 @@ h1 {
   flex-direction: row;
   li {
     a {
-      font-weight: bold;
+      color: rgba(255, 255, 255, 0.87);
+      transition: color 0.3s;
+    }
+    a:hover {
       color: white;
     }
   }
+}
+
+#site-name {
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-size: 2rem;
 }
 
 #hero-title {
@@ -34,4 +42,13 @@ h1 {
   color: white;
   margin: 0;
   font-size: 4rem;
+  text-align: center;
+}
+
+#hero-text {
+  color: white;
+  opacity: 87%;
+  max-width: 560px;
+  font-size: 1rem;
+  text-align: center;
 }

@@ -1,16 +1,15 @@
-import { addAfter, addBefore, insertItem, makeNodeItem } from '../utils';
+import { addAfter, addBeforeBegin, insertItem } from '../utils';
 import '../css/components/header.scss';
-import { content } from '../wrapper';
 
 // Initialize Header
-addBefore(content, null, 'header', 'site-header');
-const siteHeader = document.getElementById('site-header');
+insertItem('content', null, 'header', 'site-header');
 
-insertItem(siteHeader, null, 'nav', 'site-navbar');
-const siteNavbar = document.getElementById('site-navbar');
+insertItem('site-header', null, 'nav', 'site-navbar');
 
-insertItem(siteNavbar, null, 'ul', 'site-nav-wrapper');
-const siteNavWrapper = document.getElementById('site-nav-wrapper');
+insertItem('site-navbar', null, 'ul', 'site-nav-wrapper');
+
+// Initialize site name
+addBeforeBegin('site-nav-wrapper', 'Site Name', 'span', 'site-name');
 
 // Create Nav items
 function makeNavLink(name) {
@@ -24,17 +23,15 @@ function makeNavLink(name) {
   return { navItemLi };
 }
 
-// Initialize site name
-const siteName = document.createElement('span');
-siteName.innerHTML = 'Site Name';
-siteName.setAttribute('id', 'site-name');
-siteNavbar.insertAdjacentElement('afterbegin', siteName);
-
+// Create nav items dynamically
 (function () {
   const pages = ['Home', 'Menu', 'About', 'Contact'];
   for (let page of pages) {
-    siteNavWrapper.insertAdjacentElement('beforeend', makeNavLink(page).navItemLi);
+    document.getElementById('site-nav-wrapper').insertAdjacentElement('beforeend', makeNavLink(page).navItemLi);
   }
 })();
 
-export { siteHeader };
+export const header = document.getElementById('site-header');
+// export const siteNavbar = document.getElementById('ssite-navbar');
+// export const siteNavWrapper = document.getElementById('site-nav-wrapper');
+// export const header = document.getElementById('site-header');
