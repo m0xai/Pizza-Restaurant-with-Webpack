@@ -79,10 +79,30 @@
 
 #home-menu-section-wrapper {
   height: 1471px;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.04);
 }
 
 #home-menu-section {
   width: 1200px;
+  height: 1471px;
+  padding: 60px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#home-menu-header {
+  width: 700px;
+  h2,
+  p {
+    text-align: center;
+  }
+}
+
+#home-menu-items-wrapper {
   height: 890px;
+  width: 100%;
+  background-color: royalblue;
 }
