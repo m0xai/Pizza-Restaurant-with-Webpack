@@ -1,5 +1,5 @@
 import { addAfter, insertItem, makeButton, makeImage } from '../utils';
-import { headerImages, homeMenuItemImgs } from '../imageUrls';
+import { headerImages, homeMenuItemImgs, homeServiceItemImages } from '../imageUrls';
 import '../css/pages/home.scss';
 import header from '../components/header';
 
@@ -45,7 +45,7 @@ insertItem('home-about-right', 'Learn More', 'button', null, 'btn-primary');
 // Create menu section in home
 insertItem('home-main', null, 'div', 'home-menu-section-wrapper');
 insertItem('home-menu-section-wrapper', null, 'div', 'home-menu-section');
-insertItem('home-menu-section', null, 'div', 'home-menu-header');
+insertItem('home-menu-section', null, 'div', 'home-menu-header', 'home-section-header');
 insertItem('home-menu-header', 'Our Menu', 'h2', null, 'section-title');
 insertItem(
   'home-menu-header',
@@ -63,7 +63,7 @@ for (let i = 0; i < 8; i++) {
   // Home Menu Item Meta Section
   insertItem('home-menu-item-wrapper' + i, null, 'div', 'home-menu-item-meta' + i, 'home-menu-item-meta');
   insertItem('home-menu-item-meta' + i, null, 'div', 'home-menu-item-title-price' + i, 'home-menu-item-title-price');
-  insertItem('home-menu-item-title-price' + i, 'Pizza Margaritta', 'span', null, 'home-menu-item-title');
+  insertItem('home-menu-item-title-price' + i, 'Pizza Margherita', 'span', null, 'home-menu-item-title');
   insertItem('home-menu-item-title-price' + i, '€10', 'span', null, 'home-menu-item-price');
   insertItem(
     'home-menu-item-meta' + i,
@@ -79,5 +79,26 @@ insertItem('home-menu-section', 'See More', 'button', null, 'btn-primary');
 
 insertItem('home-main', null, 'div', 'home-whyus-section-wrapper');
 insertItem('home-whyus-section-wrapper', null, 'div', 'home-whyus-section');
+insertItem('home-whyus-section', null, 'div', 'home-whyus-header', 'home-section-header');
+insertItem('home-whyus-header', 'Why Choose Us?', 'h2', null, 'section-title');
+insertItem(
+  'home-whyus-header',
+  'Fish is one of the most wholesome foods that man can eat. In fact, people have been eating fish throughout human',
+  'p',
+  null,
+  'section-paragraph'
+);
+insertItem('home-whyus-header', null, 'hr');
+insertItem('home-whyus-section', null, 'div', 'home-whyus-services-wrapper');
+for (let i = 1; i < 7; i++) {
+  insertItem('home-whyus-services-wrapper', null, 'div', 'home-whyus-service' + i, 'home-whyus-service');
+  makeImage('home-whyus-service' + i, homeServiceItemImages[i]);
+  insertItem('home-whyus-service' + i, 'Service ' + i, 'h3');
+  insertItem(
+    'home-whyus-service' + i,
+    'We provide best and fresh quality foods. We also gives you required signature dishes ad more nice and cool services',
+    'p'
+  );
+}
 
 export const homeMain = document.querySelector('#home-main');
