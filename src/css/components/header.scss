@@ -1,3 +1,5 @@
+@import '../helpers/main_helper.scss';
+
 h1 {
   color: red;
 }
@@ -33,12 +35,12 @@ h1 {
 }
 
 #site-name {
-  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: $cursive-font;
   font-size: 2rem;
 }
 
 #hero-title {
-  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: $cursive-font;
   color: white;
   margin: 0;
   font-size: 6rem;

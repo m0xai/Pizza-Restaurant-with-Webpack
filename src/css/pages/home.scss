@@ -1,3 +1,5 @@
+@import '../helpers/main_helper.scss';
+
 #home-hero {
   margin-top: -60px;
   width: 100%;
@@ -30,7 +32,6 @@
 #home-whyus-section {
   width: 1200px;
   height: 509px;
-  background-color: red;
 }
 
 #home-about-section {
@@ -101,8 +102,60 @@
   }
 }
 
-#home-menu-items-wrapper {
+#home-menu-items-section {
   height: 890px;
   width: 100%;
-  background-color: royalblue;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.home-menu-item-wrapper {
+  width: 277px;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.home-menu-image {
+  width: 277px;
+  height: 208px;
+  object-fit: scale-down;
+}
+
+.home-menu-item-meta {
+  width: 230px;
+  margin: 0 auto;
+  margin-top: 25px;
+  .home-menu-item-title {
+    font-size: 1.5rem;
+    font-family: $cursive-font;
+  }
+  .home-menu-item-title-price {
+    display: flex;
+    justify-content: space-between;
+  }
+  .home-menu-item-price {
+    text-align: left;
+    padding: 5px 10px;
+    color: white;
+    background-color: $primary-color;
+  }
+}
+
+.home-menu-item-order-btn {
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: $primary-color;
+  background-color: rgba(232, 107, 38, 0.08);
+  transition: background-color, color, 0.3s;
+}
+
+.home-menu-item-order-btn:hover {
+  background-color: rgba(232, 107, 38, 0.8);
+  cursor: pointer;
+  color: white;
 }

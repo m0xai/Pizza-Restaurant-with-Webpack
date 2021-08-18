@@ -57,20 +57,24 @@ insertItem(
 insertItem('home-menu-header', null, 'hr');
 insertItem('home-menu-section', null, 'div', 'home-menu-items-section');
 const menuItemImageUrls = [];
-for (let i = 1; i < 9; i++) {
-  insertItem('home-menu-items-section', null, 'div', 'home-menu-item-wrapper' + i);
-  makeImage('home-menu-item-wrapper' + i, homeMenuItemImgs[i], null, 'home-about-image');
-  insertItem('home-menu-item-wrapper' + i, 'Pizza Margaritta', 'h3', null, 'home-menu-item-title');
-  insertItem('home-menu-item-wrapper' + i, '€10', 'span', null, 'home-menu-item-price');
+for (let i = 0; i < 8; i++) {
+  insertItem('home-menu-items-section', null, 'div', 'home-menu-item-wrapper' + i, 'home-menu-item-wrapper');
+  makeImage('home-menu-item-wrapper' + i, homeMenuItemImgs[i], null, 'home-menu-image');
+  // Home Menu Item Meta Section
+  insertItem('home-menu-item-wrapper' + i, null, 'div', 'home-menu-item-meta' + i, 'home-menu-item-meta');
+  insertItem('home-menu-item-meta' + i, null, 'div', 'home-menu-item-title-price' + i, 'home-menu-item-title-price');
+  insertItem('home-menu-item-title-price' + i, 'Pizza Margaritta', 'span', null, 'home-menu-item-title');
+  insertItem('home-menu-item-title-price' + i, '€10', 'span', null, 'home-menu-item-price');
   insertItem(
-    'home-menu-item-wrapper' + i,
+    'home-menu-item-meta' + i,
     'Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque',
     'p',
     null,
     'home-menu-item-description'
   );
-  insertItem('home-menu-item-wrapper' + i, 'Jetzt Bestellen', 'button', null, 'home-menu-item-order-btn');
+  insertItem('home-menu-item-meta' + i, 'Jetzt Bestellen', 'button', null, 'home-menu-item-order-btn');
 }
+// Menu Itens List After
 insertItem('home-menu-section', 'See More', 'button', null, 'btn-primary');
 
 insertItem('home-main', null, 'div', 'home-whyus-section-wrapper');
