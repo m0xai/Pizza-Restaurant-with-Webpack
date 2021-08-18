@@ -1,4 +1,4 @@
-import { addAfter, addBeforeBegin, insertItem } from '../utils';
+import { addBeforeBegin, insertItem } from '../utils';
 import '../css/components/header.scss';
 
 // Initialize Header

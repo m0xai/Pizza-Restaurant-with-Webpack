@@ -1,5 +1,5 @@
 import { addAfter, insertItem, makeButton, makeImage } from '../utils';
-import { headerImages, homeMenuItemImgs, homeServiceItemImages } from '../imageUrls';
+import { headerImages, homeMenuItemImgs, homeServiceItemImages, homeCustomersImages, starsIcon } from '../imageUrls';
 import '../css/pages/home.scss';
 import header from '../components/header';
 
@@ -7,7 +7,7 @@ addAfter('site-header', null, 'div', 'home-main');
 
 // Create Hero in home page
 insertItem('home-main', null, 'div', 'home-hero');
-insertItem('home-hero', 'Sehr leckeres Essen', 'h1', 'hero-title');
+insertItem('home-hero', 'Sehr leckeres Pizza', 'h1', 'hero-title');
 insertItem(
   'home-hero',
   'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.',
@@ -99,6 +99,33 @@ for (let i = 1; i < 7; i++) {
     'We provide best and fresh quality foods. We also gives you required signature dishes ad more nice and cool services',
     'p'
   );
+}
+
+// Create happy customers section
+insertItem('home-main', null, 'div', 'home-customers-section-wrapper');
+insertItem('home-customers-section-wrapper', null, 'div', 'home-customers-section');
+insertItem('home-customers-section', null, 'div', 'home-customers-header', 'home-section-header');
+insertItem('home-customers-header', 'Listen to our customers', 'h2', null, 'section-title');
+insertItem(
+  'home-customers-header',
+  'Fish is one of the most wholesome foods that man can eat. In fact, people have been eating fish throughout human',
+  'p',
+  null,
+  'section-paragraph'
+);
+insertItem('home-customers-header', null, 'hr');
+insertItem('home-customers-section', null, 'div', 'home-customers-container');
+for (let i = 0; i < 3; i++) {
+  insertItem('home-customers-container', null, 'div', 'home-customer-wrapper' + i, 'home-customer-wrapper');
+  makeImage('home-customer-wrapper' + i, homeCustomersImages[i]);
+  makeImage('home-customer-wrapper' + i, starsIcon);
+  insertItem(
+    'home-customer-wrapper' + i,
+    'We provide best and fresh quality foods. We also gives you required signature dishes ad more nice and cool services',
+    'p'
+  );
+  const customersName = ['Kerem Zopcuk', 'Kateryna R.', 'Max Mustermann'];
+  insertItem('home-customer-wrapper' + i, customersName[i], 'h3');
 }
 
 export const homeMain = document.querySelector('#home-main');

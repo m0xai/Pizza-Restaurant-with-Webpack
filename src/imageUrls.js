@@ -1,3 +1,5 @@
+import stars from './img/misc/stars.png';
+
 import homeAboutImg1 from './img/pexels-daria-shevtsova-1260968.jpg';
 import homeAboutImg2 from './img/pexels-christina-voinova-7368032.jpg';
 import homeAboutImg3 from './img/pexels-brett-jordan-825661.jpg';
@@ -17,6 +19,10 @@ import homeServiceItem2 from './img/services/011-delivery-truck.png';
 import homeServiceItem3 from './img/services/018-time.png';
 import homeServiceItem4 from './img/services/027-order-food.png';
 import homeServiceItem5 from './img/services/032-dinner.png';
+
+import homeCustomer1 from './img/customers/rsz_1img_7716_square.jpg';
+import homeCustomer2 from './img/customers/pexels-anastasia-shuraeva-5704720.jpg';
+import homeCustomer3 from './img/customers/pexels-anna-nekrashevich-6801642.jpg';
 
 export const headerImages = [homeAboutImg1, homeAboutImg2, homeAboutImg3];
 export const homeMenuItemImgs = [
@@ -38,3 +44,7 @@ export const homeServiceItemImages = [
   homeServiceItem4,
   homeServiceItem5,
 ];
+
+export const homeCustomersImages = [homeCustomer1, homeCustomer2, homeCustomer3];
+
+export const starsIcon = stars;
