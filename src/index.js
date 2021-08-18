@@ -1,6 +1,6 @@
 import { homeMain } from './pages/home';
 import header from './components/header';
-import footerWrapper from './components/footer';
+import { appendFooter } from './components/footer';
 import { insertItem, makeImage } from './utils';
 import './css/main.scss';
 
@@ -12,6 +12,9 @@ import './css/main.scss';
 //     .then(({ default: footer }) => content.appendChild(footer))
 //     .catch((error) => 'An error occurred while loading the component');
 // });
+
+const showFooter = document.getElementById('book-now-btn');
+showFooter.addEventListener('click', appendFooter);
 
 insertItem('content', '', 'div', 'mdIci', 'kerem');
 insertItem('mdIci', 'Merhaba Dunya', 'h2', 'merhabeDunya', 'none');
