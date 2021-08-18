@@ -128,4 +128,21 @@ for (let i = 0; i < 3; i++) {
   insertItem('home-customer-wrapper' + i, customersName[i], 'h3');
 }
 
+insertItem('home-main', null, 'div', 'home-stats-section-wrapper');
+insertItem('home-stats-section-wrapper', null, 'div', 'home-stats-section');
+const stats = [
+  { sayi: '56,789', islem: 'Happy Customer' },
+  { sayi: '10,023', islem: 'Pizzas Sold' },
+  { sayi: '4,544', islem: 'Working Hours' },
+  { sayi: '12,520', islem: 'Pizzas Delivered' },
+];
+
+for (let i = 0; i < 4; i++) {
+  insertItem('home-stats-section', null, 'div', 'home-stats-item' + i, 'home-stats-item');
+  insertItem('home-stats-item' + i, stats[i].sayi, 'h2', null, 'section-title');
+  insertItem('home-stats-item' + i, stats[i].islem, 'p');
+  insertItem('home-stats-item' + i, null, 'hr');
+}
+
+// TODO: Make Footer and pages
 export const homeMain = document.querySelector('#home-main');

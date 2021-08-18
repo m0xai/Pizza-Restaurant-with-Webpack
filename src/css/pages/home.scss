@@ -276,3 +276,22 @@
     }
   }
 }
+
+#home-stats-section-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.04);
+  height: 375px;
+  #home-stats-section {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .home-stats-item {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+    }
+  }
+}
