@@ -53,39 +53,28 @@ function switchStyles(page, thisElement) {
     shrinkHero(false);
     aboutWrapper ? homeMain.removeChild(aboutWrapper) : false;
     menuWrapper ? homeMain.removeChild(menuWrapper) : false;
+    contactWrapper ? homeMain.removeChild(contactWrapper) : false;
+
     heroTitle.innerText = 'Pizzalieber Wilkommen!';
 
     // homeMain.removeChild(contactWrapper);
   }
   if (page == 'about') {
     shrinkHero(true);
-    homeMain.removeChild(menuWrapper);
-    // homeMain.removeChild(contactWrapper);
+    menuWrapper ? homeMain.removeChild(menuWrapper) : false;
+    contactWrapper ? homeMain.removeChild(contactWrapper) : false;
     heroTitle.innerText = 'Wir verstehen von Pizzas';
   }
   if (page == 'menu') {
     shrinkHero(true);
     aboutWrapper ? homeMain.removeChild(aboutWrapper) : false;
+    contactWrapper ? homeMain.removeChild(contactWrapper) : false;
     heroTitle.innerText = 'Wähle nach dein Geschmack';
-    // homeMain.removeChild(contactWrapper);
+  }
+  if (page == 'contact') {
+    shrinkHero(true);
+    aboutWrapper ? homeMain.removeChild(aboutWrapper) : false;
+    menuWrapper ? homeMain.removeChild(menuWrapper) : false;
+    heroTitle.innerText = 'Lass uns kennenlernen';
   }
 }
-//? Dynamically Importing
-// const dynMenu = () => import('./pages/menu');
-// const menuButton = document.getElementById('nav-btn-menu');
-// menuButton.addEventListener('click', () => {
-//   dynMenu()
-//     .then(({ default: initMenu }) => initMenu())
-//     .catch((error) => 'An error occurred while loading the component');
-// });
-// // Import About page dynamically
-// const dynAbout = () => import('./pages/about');
-// const aboutButton = document.getElementById('nav-btn-about');
-// aboutButton.addEventListener('click', () => {
-//   dynAbout()
-//     .then(({ default: initAbout }) => initAbout())
-//     .catch((error) => 'An error occurred while loading the component');
-// });
-
-// const showFooter = document.getElementById('book-now-btn');
-// showFooter.addEventListener('click', initMenu);

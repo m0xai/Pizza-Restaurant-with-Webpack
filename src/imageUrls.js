@@ -24,6 +24,8 @@ import homeCustomer1 from './img/customers/rsz_1img_7716_square.jpg';
 import homeCustomer2 from './img/customers/pexels-anastasia-shuraeva-5704720.jpg';
 import homeCustomer3 from './img/customers/pexels-anna-nekrashevich-6801642.jpg';
 
+import contactMap from './img/map/map.png';
+
 export const headerImages = [homeAboutImg1, homeAboutImg2, homeAboutImg3];
 export const homeMenuItemImgs = [
   homeMenuItemImg1,
@@ -48,3 +50,5 @@ export const homeServiceItemImages = [
 export const homeCustomersImages = [homeCustomer1, homeCustomer2, homeCustomer3];
 
 export const starsIcon = stars;
+
+export const mapImg = contactMap;

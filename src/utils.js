@@ -1,3 +1,13 @@
+// ! Better Element Creator
+// const elementor = (parent, element, attr, attrVal) => {
+//   const el = document.createElement(element);
+//   for (let i = 0; i < attr.length; i++) {
+//     el.setAttribute(attr[i], attrVal[i]);
+//   }
+//   parent.appendChild(el);
+//   return el;
+// };
+
 function insertItem(parentId, innerHTML, element, id, klasse) {
   const item = document.createElement(element);
   item.innerHTML = innerHTML;
@@ -39,4 +49,15 @@ function makeButton(itemBeforeId, innerHTML, element, id, klasse) {
   document.getElementById(itemBeforeId).insertAdjacentElement('afterend', button);
 }
 
-export { insertItem, makeImage, addAfter, makeButton, addBeforeBegin };
+function insertFormEl(parent, innerHTML, element, id, klasse, type, forParam, name) {
+  const formEl = document.createElement(element);
+  formEl.innerHTML = innerHTML;
+  type ? formEl.setAttribute('type', type) : null;
+  forParam ? formEl.setAttribute('for', forParam) : null;
+  name ? formEl.setAttribute('name', name) : null;
+  id != null ? formEl.setAttribute('id', id) : null;
+  klasse != null ? formEl.classList.add(klasse) : null;
+  document.getElementById(parent).insertAdjacentElement('beforeend', formEl);
+}
+
+export { insertItem, makeImage, addAfter, makeButton, addBeforeBegin, insertFormEl };
