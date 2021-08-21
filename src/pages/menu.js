@@ -1,5 +1,6 @@
 import { insertItem, makeImage } from '../utils';
 import { homeMenuItemImgs } from '../imageUrls';
+import '../css/pages/menu.scss';
 
 function initMenu() {
   // Create menu section

@@ -1,13 +1,15 @@
 #home-contact-section-wrapper {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   #home-contact-section {
     width: 100%;
     max-width: 1200px;
     height: 100%;
-    min-height: 800px;
-
-    margin: 0 auto;
-
+    min-height: 756px;
+    margin-bottom: 30px;
+    align-items: center;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -23,7 +25,11 @@
     #home-contact-right-section {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      #home-contact-right-section-header {
+        span {
+          display: block;
+        }
+      }
       #contact-page-form {
         display: flex;
         flex-direction: column;

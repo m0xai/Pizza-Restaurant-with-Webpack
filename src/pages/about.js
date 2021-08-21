@@ -1,5 +1,6 @@
 import { headerImages, homeServiceItemImages, homeCustomersImages, starsIcon } from '../imageUrls';
 import { insertItem, makeImage } from '../utils';
+import '../css/pages/about.scss';
 
 function initAbout() {
   // Create About section on home page

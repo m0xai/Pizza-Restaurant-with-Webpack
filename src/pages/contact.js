@@ -10,7 +10,7 @@ function initContact() {
 
   // Contact page left section
   insertItem('home-contact-section', null, 'div', 'home-contact-left-section');
-  insertItem('home-contact-left-section', 'Contact', 'h2', 'contact-page-title', 'section-title');
+  insertItem('home-contact-left-section', 'Adresse', 'h2', 'contact-page-title', 'section-title');
   insertItem('home-contact-left-section', null, 'span', null, 'hr-left');
   insertItem(
     'home-contact-left-section',
@@ -22,6 +22,10 @@ function initContact() {
 
   // Contact Page right section
   insertItem('home-contact-section', null, 'div', 'home-contact-right-section');
+  insertItem('home-contact-right-section', null, 'div', 'home-contact-right-section-header');
+  insertItem('home-contact-right-section-header', 'Contact Form', 'h2', null, 'section-title');
+  insertItem('home-contact-right-section-header', null, 'span', null, 'hr-left');
+
   insertItem('home-contact-right-section', null, 'form', 'contact-page-form');
 
   // Insert Form elements
