@@ -1,7 +1,6 @@
 import { addAfter, insertItem, makeButton, makeImage } from '../utils';
 import { headerImages, homeMenuItemImgs, homeServiceItemImages, homeCustomersImages, starsIcon } from '../imageUrls';
 import '../css/pages/home.scss';
-import header from '../components/header';
 
 addAfter('site-header', null, 'div', 'home-main');
 
