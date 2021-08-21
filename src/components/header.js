@@ -16,8 +16,8 @@ function makeNavLink(name) {
   const navItemLi = document.createElement('li');
   const navItemLink = document.createElement('a');
   navItemLink.innerText = name;
-  navItemLink.href = `/${name.toLowerCase()}`;
-  navItemLi.setAttribute('id', 'navItem' + name);
+  // navItemLink.href = `/${name.toLowerCase()}`;
+  navItemLi.setAttribute('id', 'nav-btn-' + name.toLowerCase());
   navItemLi.setAttribute('class', 'nav-item');
   navItemLi.appendChild(navItemLink);
   return { navItemLi };
@@ -32,6 +32,3 @@ function makeNavLink(name) {
 })();
 
 export const header = document.getElementById('site-header');
-// export const siteNavbar = document.getElementById('ssite-navbar');
-// export const siteNavWrapper = document.getElementById('site-nav-wrapper');
-// export const header = document.getElementById('site-header');

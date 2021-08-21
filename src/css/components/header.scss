@@ -30,6 +30,12 @@ h1 {
     }
     a:hover {
       color: white;
+      cursor: pointer;
+    }
+  }
+  .aktiv {
+    a {
+      color: white;
     }
   }
 }
