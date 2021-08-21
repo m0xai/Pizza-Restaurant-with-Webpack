@@ -1,9 +1,5 @@
 import homeMain from './pages/home';
 import './css/main.scss';
-<<<<<<< HEAD
-=======
-
-//TODO Split Menu and About Pagea(keep first about seciton as its)
 
 const menuButtons = document.querySelectorAll('.nav-item');
 menuButtons.forEach((button) => button.addEventListener('click', router));
@@ -80,4 +76,3 @@ function switchStyles(page, thisElement) {
     heroTitle.innerText = 'Lass uns kennenlernen';
   }
 }
->>>>>>> feature/multi-page-app
