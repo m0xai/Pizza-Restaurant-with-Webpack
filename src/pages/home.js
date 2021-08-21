@@ -7,7 +7,7 @@ addAfter('site-header', null, 'div', 'home-main');
 
 // Create Hero in home page
 insertItem('home-main', null, 'div', 'home-hero');
-insertItem('home-hero', 'Sehr leckeres Pizza', 'h1', 'hero-title');
+insertItem('home-hero', 'Pizzalieber Wilkommen!', 'h1', 'hero-title');
 insertItem(
   'home-hero',
   'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.',

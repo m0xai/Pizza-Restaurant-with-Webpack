@@ -38,6 +38,12 @@ document.getElementById('email-input').placeholder = 'E-Mail';
 insertItem('footer-part2', 'Subscribe', 'button', 'subscribe-button');
 
 insertItem('footer-wrapper', null, 'div', 'footer-bottom-section');
+insertItem(
+  'footer-bottom-section',
+  'Diese Webseite wurde von <a href="https://github.com/m0xai" title="m0xai" target="_blank"> Kerem Zopcuk</a> erstellt.',
+  'p',
+  'footer-copyright'
+);
 
 const footer = document.getElementById('footer-wrappper');
 

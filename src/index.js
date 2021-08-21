@@ -30,26 +30,44 @@ function dynamicImport(page) {
 //? Hides other page contents and changes hero style
 function switchStyles(page, thisElement) {
   const homeHero = document.getElementById('home-hero');
+  const heroText = document.getElementById('hero-text');
+  const heroTitle = document.getElementById('hero-title');
+  const heroBtn = document.getElementById('book-now-btn');
   const menuWrapper = document.getElementById('home-menu-section-wrapper');
   const aboutWrapper = document.getElementById('home-about-section-wrapper');
-  // const contactWrapper = document.getElementById('home-contact-section-wrapper');
+  const contactWrapper = document.getElementById('home-contact-section-wrapper');
 
   function shrinkHero(param) {
-    param ? (homeHero.style.maxHeight = '33%') : (homeHero.style.maxHeight = '100vh');
+    if (param) {
+      homeHero.style.height = '50vh';
+      heroText.style.display = 'none';
+      heroBtn.style.display = 'none';
+    } else {
+      homeHero.style.height = '100vh';
+      heroText.style.display = 'unset';
+      heroBtn.style.display = 'unset';
+    }
   }
 
   if (page == 'home') {
     shrinkHero(false);
-    homeMain.removeChild(aboutWrapper);
-    homeMain.removeChild(menuWrapper);
+    aboutWrapper ? homeMain.removeChild(aboutWrapper) : false;
+    menuWrapper ? homeMain.removeChild(menuWrapper) : false;
+    heroTitle.innerText = 'Pizzalieber Wilkommen!';
+
+    // homeMain.removeChild(contactWrapper);
   }
   if (page == 'about') {
     shrinkHero(true);
     homeMain.removeChild(menuWrapper);
+    // homeMain.removeChild(contactWrapper);
+    heroTitle.innerText = 'Wir verstehen von Pizzas';
   }
   if (page == 'menu') {
     shrinkHero(true);
-    homeMain.removeChild(aboutWrapper);
+    aboutWrapper ? homeMain.removeChild(aboutWrapper) : false;
+    heroTitle.innerText = 'Wähle nach dein Geschmack';
+    // homeMain.removeChild(contactWrapper);
   }
 }
 //? Dynamically Importing
