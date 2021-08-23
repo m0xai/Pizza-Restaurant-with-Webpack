@@ -3,8 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: './src/index.js',
-  devtool: 'inline-source-map',
+  // entry: './src/index.js', // Its default, no need to write
+  // devtool: 'inline-source-map',
   optimization: {
     usedExports: true,
   },
